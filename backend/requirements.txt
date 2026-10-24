@@ -1,0 +1,12 @@
+﻿asgiref==3.12.1
+cffi==2.1.0
+charset-normalizer==3.5.2
+cryptography==50.0.0
+Django==6.0.7
+django-cors-headers==4.9.0
+djangorestframework==3.17.1
+pillow==12.3.0
+pycparser==3.0
+reportlab==5.0.1
+sqlparse==0.5.5
+tzdata==2026.3
