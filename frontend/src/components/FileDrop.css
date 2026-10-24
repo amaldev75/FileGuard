@@ -1,0 +1,54 @@
+.filedrop {
+  border: 1.5px dashed var(--panel-border);
+  border-radius: 14px;
+  padding: 36px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  background: rgba(255,255,255,0.01);
+}
+
+.filedrop:hover,
+.filedrop-active {
+  border-color: var(--seal);
+  background: rgba(201,163,91,0.05);
+}
+
+.filedrop-icon {
+  font-size: 20px;
+  color: var(--seal);
+  margin-bottom: 10px;
+}
+
+.filedrop-text {
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+.filedrop-accent {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  opacity: 0.7;
+}
+
+.filedrop-chosen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.filedrop-filename {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.filedrop-filesize {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}

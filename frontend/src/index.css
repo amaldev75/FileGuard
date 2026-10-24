@@ -1,0 +1,51 @@
+:root {
+  --bg: #0f1417;
+  --panel: #161d22;
+  --panel-border: #263039;
+  --text: #e7edf1;
+  --text-dim: #8fa1ab;
+  --seal: #c9a35b;
+  --seal-dim: #7d6a41;
+  --ok: #4fb286;
+  --ok-bg: #12251d;
+  --bad: #d96a5c;
+  --bad-bg: #2a1715;
+  --warn: #d9b25c;
+  --warn-bg: #2a2315;
+  --mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(201,163,91,0.06), transparent 40%),
+    radial-gradient(circle at 85% 100%, rgba(79,178,134,0.05), transparent 45%);
+  color: var(--text);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+::selection {
+  background: var(--seal);
+  color: #16130a;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--seal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

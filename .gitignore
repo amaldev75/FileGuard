@@ -1,0 +1,23 @@
+# ---- secrets: never upload ----
+backend/keys/
+*.pem
+
+# ---- local data ----
+backend/db.sqlite3
+backend/media/
+
+# ---- Python ----
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# ---- Node / React ----
+node_modules/
+frontend/dist/
+
+# ---- editor / system ----
+.vscode/
+.env
+.DS_Store
+Thumbs.db

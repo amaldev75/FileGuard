@@ -1,0 +1,137 @@
+.page-head {
+  margin-bottom: 28px;
+}
+
+.page-eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--seal);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+}
+
+.page-desc {
+  color: var(--text-dim);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.05s ease;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.btn:active { transform: scale(0.99); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-primary {
+  background: linear-gradient(155deg, var(--seal), var(--seal-dim));
+  color: #16130a;
+}
+.btn-primary:not(:disabled):hover { filter: brightness(1.08); }
+
+.alert {
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+.alert-error {
+  background: var(--bad-bg);
+  color: var(--bad);
+  border-color: rgba(217,106,92,0.3);
+}
+
+.mono { font-family: var(--mono); }
+
+.kv {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  row-gap: 10px;
+  column-gap: 16px;
+  margin: 0;
+}
+
+.kv dt {
+  color: var(--text-dim);
+  font-size: 13px;
+  padding-top: 2px;
+}
+
+.kv dd {
+  margin: 0;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.hash-value {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.result-card {
+  border-color: rgba(79,178,134,0.35);
+}
+
+.result-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.result-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--ok);
+  color: #0c1a14;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+}
+
+.hint-strip {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  border-left: 2px solid var(--seal-dim);
+  padding-left: 14px;
+}
+
+.hint-strip strong {
+  color: var(--text);
+}

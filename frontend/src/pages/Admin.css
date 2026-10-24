@@ -1,0 +1,102 @@
+/* Styles for the Admin features: status pills, action buttons, admin tables, top-bar user area. */
+
+.topbar-user { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--text-dim); }
+.role-chip {
+  font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em;
+  color: #16130a; background: var(--seal); border-radius: 6px; padding: 2px 7px; font-weight: 600;
+}
+.btn-logout {
+  padding: 7px 12px; border-radius: 8px; border: 1px solid var(--panel-border);
+  background: transparent; color: var(--text); cursor: pointer; font: inherit;
+}
+.btn-logout:hover { border-color: var(--seal-dim); }
+
+/* status pills */
+.fs-pill {
+  display: inline-block; padding: 3px 10px; border-radius: 999px; font-family: var(--mono);
+  font-size: 11px; font-weight: 600; border: 1px solid transparent;
+}
+.fs-pending  { color: #e0b45a; background: rgba(224,180,90,.12); border-color: rgba(224,180,90,.35); }
+.fs-approved { color: #6fcf97; background: rgba(111,207,151,.12); border-color: rgba(111,207,151,.35); }
+.fs-rejected { color: #eb7d78; background: rgba(235,125,120,.12); border-color: rgba(235,125,120,.35); }
+
+/* tables */
+.ad-table { display: flex; flex-direction: column; }
+.ad-row {
+  display: grid; gap: 12px; align-items: center; padding: 12px 10px;
+  border-bottom: 1px solid var(--panel-border); font-size: 13px;
+}
+.ad-head {
+  color: var(--text-dim); font-family: var(--mono); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.ad-wrap { word-break: break-all; }
+.ad-note {
+  font-size: 12px; color: #eb7d78; padding: 6px 10px 12px;
+  border-bottom: 1px solid var(--panel-border);
+}
+.ad-note-ok { color: #6fcf97; }
+.ad-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* buttons */
+.ad-btn {
+  font-family: var(--mono); font-size: 11px; padding: 6px 10px; border-radius: 7px; cursor: pointer;
+  color: var(--text); background: var(--panel); border: 1px solid var(--panel-border);
+}
+.ad-btn:hover:not(:disabled) { border-color: var(--seal-dim); }
+.ad-btn:disabled { opacity: .45; cursor: not-allowed; }
+.ad-btn-ok { color: #6fcf97; border-color: rgba(111,207,151,.45); }
+.ad-btn-danger { color: #eb7d78; border-color: rgba(235,125,120,.45); }
+
+.btn-report {
+  margin-top: 18px; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 9px;
+  cursor: pointer; color: var(--seal); background: transparent; border: 1px solid var(--seal-dim);
+}
+.btn-report:hover:not(:disabled) { background: rgba(201,163,91,.1); }
+.btn-report:disabled { opacity: .5; cursor: not-allowed; }
+
+.ad-notice {
+  background: rgba(111,207,151,.1); border: 1px solid rgba(111,207,151,.35); color: #8fd9ae;
+  padding: 10px 14px; border-radius: 10px; font-size: 13px; margin-bottom: 16px;
+}
+
+/* admin stat cards */
+.ad-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.ad-stat { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 12px; padding: 14px 16px; }
+.ad-stat-num { font-size: 28px; font-weight: 700; line-height: 1.1; }
+.ad-stat-label { font-family: var(--mono); font-size: 11px; color: var(--text-dim); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+.ad-stat-ok .ad-stat-num { color: #6fcf97; }
+.ad-stat-warn .ad-stat-num { color: #e0b45a; }
+.ad-stat-bad .ad-stat-num { color: #eb7d78; }
+
+.ad-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.ad-filter {
+  font-family: var(--mono); font-size: 12px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  color: var(--text-dim); background: transparent; border: 1px solid var(--panel-border);
+}
+.ad-filter.on { color: #16130a; background: var(--seal); border-color: var(--seal); font-weight: 600; }
+
+/* expiry */
+.fs-expired { color: #e0904f; background: rgba(214,126,60,.13); border-color: rgba(214,126,60,.38); }
+.ad-note-warn { color: #e0904f; }
+.ad-btn-warn { color: #e0904f; border-color: rgba(214,126,60,.4); }
+.ad-btn-warn:hover { background: rgba(214,126,60,.1); }
+
+/* approve / expiry dialog */
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(5,8,10,.72); display: grid; place-items: center; z-index: 50; padding: 16px;
+}
+.modal-card {
+  width: 100%; max-width: 440px; background: var(--panel); border: 1px solid var(--panel-border);
+  border-radius: 14px; padding: 24px; box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+.modal-title { margin: 0 0 4px; font-size: 18px; }
+.modal-sub { margin: 0 0 18px; font-size: 13px; color: var(--text-dim); word-break: break-all; }
+.modal-label { display: block; font-size: 12px; color: var(--text-dim); margin: 14px 0 6px; font-family: var(--mono); }
+.modal-input {
+  width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 8px; font: inherit; color: var(--text);
+  background: rgba(0,0,0,.25); border: 1px solid var(--panel-border); color-scheme: dark;
+}
+.modal-input:focus { outline: none; border-color: var(--seal-dim); }
+.modal-hint { font-size: 12px; color: var(--text-dim); margin-top: 6px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 22px; }
